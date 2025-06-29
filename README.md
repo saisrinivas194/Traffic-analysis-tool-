@@ -136,7 +136,7 @@ JADTrax supports comprehensive regional analytics for 15+ major countries:
 - 🇨🇦 Canada
 - 🇦🇺 Australia
 - 🇷🇺 Russia
-- ��🇷 South Korea
+- 🇰🇷 South Korea
 - 🇮🇹 Italy
 - 🇪🇸 Spain
 - 🇲🇽 Mexico
