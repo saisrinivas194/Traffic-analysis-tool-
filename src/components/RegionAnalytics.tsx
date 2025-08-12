@@ -3,10 +3,7 @@ import {
   RegionWiseAnalytics, 
   AvailableRegions
 } from '../hooks/useTrafficData';
-<<<<<<< HEAD
-=======
 import WorldMap from './WorldMap';
->>>>>>> myrepo/main
 
 interface RegionAnalyticsProps {
   regionWiseAnalytics: RegionWiseAnalytics | null;
@@ -142,17 +139,11 @@ const RegionAnalytics: React.FC<RegionAnalyticsProps> = ({
           <div className="flex items-end">
             <button
               onClick={clearFilters}
-<<<<<<< HEAD
-              className="w-full px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors"
-            >
-              Clear Filters
-=======
               className="w-full px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition-colors flex items-center gap-2"
               aria-label="Clear Filters"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
               Reset
->>>>>>> myrepo/main
             </button>
           </div>
         </div>
@@ -241,11 +232,7 @@ const RegionAnalytics: React.FC<RegionAnalyticsProps> = ({
             <div className="p-6">
               <div className="space-y-4">
                 {regionWiseAnalytics.top_countries.map((country) => (
-<<<<<<< HEAD
-                  <div key={country.country_code} className="flex items-center justify-between">
-=======
                   <div key={country.country_code} className="flex items-center justify-between bg-blue-50 rounded-lg p-3 shadow-sm transition-transform duration-200 hover:shadow-xl hover:scale-[1.03]">
->>>>>>> myrepo/main
                     <div className="flex items-center space-x-3">
                       <span className="text-2xl">{getCountryFlag(country.country_code)}</span>
                       <div>
@@ -254,13 +241,8 @@ const RegionAnalytics: React.FC<RegionAnalyticsProps> = ({
                       </div>
                     </div>
                     <div className="text-right">
-<<<<<<< HEAD
-                      <p className="font-semibold text-gray-900">{country.pageviews.toLocaleString()}</p>
-                      <p className="text-sm text-gray-500">pageviews</p>
-=======
                       <p className="font-semibold text-blue-900">{country.pageviews.toLocaleString()}</p>
                       <p className="text-sm text-blue-500">pageviews</p>
->>>>>>> myrepo/main
                     </div>
                   </div>
                 ))}
@@ -325,32 +307,6 @@ const RegionAnalytics: React.FC<RegionAnalyticsProps> = ({
             </div>
           </div>
 
-<<<<<<< HEAD
-          {/* Regional Data Table */}
-          <div className="bg-white rounded-lg shadow">
-            <div className="px-6 py-4 border-b border-gray-200">
-              <h3 className="text-lg font-semibold text-gray-900">Detailed Regional Data</h3>
-            </div>
-            <div className="overflow-x-auto">
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Location
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Pageviews
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Visitors
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Avg Duration
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Bounce Rate
-                    </th>
-=======
           {/* Map visualization placeholder */}
           <div className="bg-white rounded-lg shadow p-6 mb-6">
             <h3 className="text-lg font-semibold mb-4">Geographic Map</h3>
@@ -385,7 +341,6 @@ const RegionAnalytics: React.FC<RegionAnalyticsProps> = ({
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Visitors</th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Avg Duration</th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Bounce Rate</th>
->>>>>>> myrepo/main
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
@@ -400,25 +355,10 @@ const RegionAnalytics: React.FC<RegionAnalyticsProps> = ({
                           </div>
                         </div>
                       </td>
-<<<<<<< HEAD
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        {region.pageviews.toLocaleString()}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        {region.unique_visitors.toLocaleString()}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        {Math.round(region.avg_duration)}s
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        {region.bounce_rate.toFixed(1)}%
-                      </td>
-=======
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-900 font-semibold">{region.pageviews.toLocaleString()}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-green-900 font-semibold">{region.unique_visitors.toLocaleString()}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-purple-900 font-semibold">{Math.round(region.avg_duration)}s</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-orange-900 font-semibold">{region.bounce_rate.toFixed(1)}%</td>
->>>>>>> myrepo/main
                     </tr>
                   ))}
                 </tbody>

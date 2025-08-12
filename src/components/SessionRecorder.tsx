@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { Play, Pause, SkipBack, SkipForward, Clock, MousePointer, Eye, Zap, User } from 'lucide-react';
-=======
 import VideoLoader from './VideoLoader';
 import { Play, Pause, SkipBack, SkipForward, MousePointer, Eye, Clock, Zap, User } from 'lucide-react';
 import { useMinimumLoading } from '../hooks/useMinimumLoading';
->>>>>>> myrepo/main
 
 interface SessionEvent {
   id: string;
@@ -38,10 +34,7 @@ export const SessionRecorder: React.FC<SessionRecorderProps> = ({
   sessionRecording,
   isLoading
 }) => {
-<<<<<<< HEAD
-=======
   const shouldShowLoading = useMinimumLoading(isLoading);
->>>>>>> myrepo/main
   const [currentTime, setCurrentTime] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [playbackSpeed, setPlaybackSpeed] = useState(1);
@@ -129,17 +122,10 @@ export const SessionRecorder: React.FC<SessionRecorderProps> = ({
     }
   };
 
-<<<<<<< HEAD
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-=======
   if (shouldShowLoading) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <VideoLoader size="fullscreen" />
->>>>>>> myrepo/main
       </div>
     );
   }

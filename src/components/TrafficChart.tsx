@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { AreaChart, Area, BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-=======
 import VideoLoader from './VideoLoader';
 import { useMinimumLoading } from '../hooks/useMinimumLoading';
 import { 
@@ -19,7 +16,6 @@ import {
   Legend, 
   ResponsiveContainer 
 } from 'recharts';
->>>>>>> myrepo/main
 import { TrendingUp, Users, Clock, MousePointer } from 'lucide-react';
 
 interface AnalyticsSummary {
@@ -53,19 +49,12 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
   realTimeData,
   isLoading
 }) => {
-<<<<<<< HEAD
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-=======
   const shouldShowLoading = useMinimumLoading(isLoading);
   
   if (shouldShowLoading) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <VideoLoader size="fullscreen" />
->>>>>>> myrepo/main
       </div>
     );
   }
@@ -105,21 +94,13 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
     <div className="space-y-6">
       {/* Key Metrics Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<<<<<<< HEAD
-        <div className="bg-white rounded-lg shadow p-6">
-=======
         <div className="bg-white rounded-lg shadow p-6 transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer">
->>>>>>> myrepo/main
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-gray-600">Pageviews</p>
               <p className="text-2xl font-bold text-gray-900">{analyticsSummary.pageviews.toLocaleString()}</p>
             </div>
-<<<<<<< HEAD
-            <TrendingUp className="w-8 h-8 text-blue-500" />
-=======
             <TrendingUp className="w-8 h-8 text-blue-500 transition-transform duration-300 hover:scale-110" />
->>>>>>> myrepo/main
           </div>
           {realTimeData && (
             <p className="text-xs text-gray-500 mt-2">
@@ -128,21 +109,13 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
           )}
         </div>
 
-<<<<<<< HEAD
-        <div className="bg-white rounded-lg shadow p-6">
-=======
         <div className="bg-white rounded-lg shadow p-6 transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer">
->>>>>>> myrepo/main
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-gray-600">Unique Visitors</p>
               <p className="text-2xl font-bold text-gray-900">{analyticsSummary.unique_visitors.toLocaleString()}</p>
             </div>
-<<<<<<< HEAD
-            <Users className="w-8 h-8 text-green-500" />
-=======
             <Users className="w-8 h-8 text-green-500 transition-transform duration-300 hover:scale-110" />
->>>>>>> myrepo/main
           </div>
           {realTimeData && (
             <p className="text-xs text-gray-500 mt-2">
@@ -151,42 +124,26 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
           )}
         </div>
 
-<<<<<<< HEAD
-        <div className="bg-white rounded-lg shadow p-6">
-=======
         <div className="bg-white rounded-lg shadow p-6 transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer">
->>>>>>> myrepo/main
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-gray-600">Bounce Rate</p>
               <p className="text-2xl font-bold text-gray-900">{analyticsSummary.bounce_rate}%</p>
             </div>
-<<<<<<< HEAD
-            <MousePointer className="w-8 h-8 text-red-500" />
-=======
             <MousePointer className="w-8 h-8 text-red-500 transition-transform duration-300 hover:scale-110" />
->>>>>>> myrepo/main
           </div>
           <p className="text-xs text-gray-500 mt-2">
             {analyticsSummary.bounce_rate > 70 ? 'High' : analyticsSummary.bounce_rate > 40 ? 'Medium' : 'Low'}
           </p>
         </div>
 
-<<<<<<< HEAD
-        <div className="bg-white rounded-lg shadow p-6">
-=======
         <div className="bg-white rounded-lg shadow p-6 transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer">
->>>>>>> myrepo/main
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-gray-600">Avg Session</p>
               <p className="text-2xl font-bold text-gray-900">{Math.round(analyticsSummary.avg_session_duration)}s</p>
             </div>
-<<<<<<< HEAD
-            <Clock className="w-8 h-8 text-purple-500" />
-=======
             <Clock className="w-8 h-8 text-purple-500 transition-transform duration-300 hover:scale-110" />
->>>>>>> myrepo/main
           </div>
           <p className="text-xs text-gray-500 mt-2">
             {analyticsSummary.avg_session_duration > 180 ? 'Excellent' : analyticsSummary.avg_session_duration > 60 ? 'Good' : 'Needs improvement'}
@@ -197,11 +154,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
       {/* Charts Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Traffic Over Time */}
-<<<<<<< HEAD
-        <div className="bg-white rounded-lg shadow p-6">
-=======
         <div className="bg-white rounded-lg shadow p-6 transition-all duration-300 hover:shadow-xl">
->>>>>>> myrepo/main
           <h3 className="text-lg font-semibold mb-4">Traffic Over Time</h3>
           <ResponsiveContainer width="100%" height={300}>
             <AreaChart data={timeSeriesData}>
@@ -217,11 +170,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
         </div>
 
         {/* Traffic Sources */}
-<<<<<<< HEAD
-        <div className="bg-white rounded-lg shadow p-6">
-=======
         <div className="bg-white rounded-lg shadow p-6 transition-all duration-300 hover:shadow-xl">
->>>>>>> myrepo/main
           <h3 className="text-lg font-semibold mb-4">Traffic Sources</h3>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
@@ -230,20 +179,12 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
                 cx="50%"
                 cy="50%"
                 labelLine={false}
-<<<<<<< HEAD
-                label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
-=======
                 label={({ name, percent }) => `${name} ${percent ? (percent * 100).toFixed(0) : 0}%`}
->>>>>>> myrepo/main
                 outerRadius={80}
                 fill="#8884d8"
                 dataKey="value"
               >
-<<<<<<< HEAD
-                {trafficSourcesData.map((entry, index) => (
-=======
                 {trafficSourcesData.map((_entry, index) => (
->>>>>>> myrepo/main
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                 ))}
               </Pie>
@@ -253,11 +194,7 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
         </div>
 
         {/* Top Pages */}
-<<<<<<< HEAD
-        <div className="bg-white rounded-lg shadow p-6">
-=======
         <div className="bg-white rounded-lg shadow p-6 transition-all duration-300 hover:shadow-xl">
->>>>>>> myrepo/main
           <h3 className="text-lg font-semibold mb-4">Top Pages</h3>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={topPagesData} layout="horizontal">
@@ -280,20 +217,12 @@ export const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
                 cx="50%"
                 cy="50%"
                 labelLine={false}
-<<<<<<< HEAD
-                label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
-=======
                 label={({ name, percent }) => `${name} ${percent ? (percent * 100).toFixed(0) : 0}%`}
->>>>>>> myrepo/main
                 outerRadius={80}
                 fill="#8884d8"
                 dataKey="value"
               >
-<<<<<<< HEAD
-                {deviceBreakdownData.map((entry, index) => (
-=======
                 {deviceBreakdownData.map((_, index) => (
->>>>>>> myrepo/main
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                 ))}
               </Pie>

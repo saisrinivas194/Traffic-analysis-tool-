@@ -1,11 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-import { BarChart3, TrendingUp, AlertCircle } from 'lucide-react';
-=======
 import VideoLoader from './VideoLoader';
 import { BarChart3, TrendingUp, AlertCircle } from 'lucide-react';
 import { useMinimumLoading } from '../hooks/useMinimumLoading';
->>>>>>> myrepo/main
 
 interface AnalyticsSummary {
   pageviews: number;
@@ -53,19 +49,12 @@ export const AnalyticsTable: React.FC<AnalyticsTableProps> = ({
   conversionFunnel,
   isLoading
 }) => {
-<<<<<<< HEAD
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-=======
   const shouldShowLoading = useMinimumLoading(isLoading);
   
   if (shouldShowLoading) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <VideoLoader size="fullscreen" />
->>>>>>> myrepo/main
       </div>
     );
   }
